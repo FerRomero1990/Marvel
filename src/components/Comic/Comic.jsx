@@ -7,7 +7,7 @@ function Comic({ nombreComic, imagen, descripcion, favorite }) {
     <section className='comic-container'>
       <h1 className='comic-name'>{nombreComic}</h1>
         <div className='comic-info'>
-          <img src={imagen} className='comic-img'/>
+          <img src={imagen} alt='comic-front-page' className='comic-img'/>
           <p className='comic-description'>{descripcion}</p>
           </div>
             <h4 className='add-favorite'>{favorite}</h4>
