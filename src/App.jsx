@@ -1,4 +1,5 @@
 import './App.css'
+import { Comic } from './components/Comic/Comic'
 
 
 function App() {
@@ -12,11 +13,15 @@ function App() {
 //     });
 // }, []);
   return (
-    <>
-      
-      <h1>Vite + React</h1>
-      
-    </>
+    <div>
+      <h1>Vamos a Lograrlo</h1>
+        <Comic
+       nombreComic="Daredevil & Echo"
+       imagen="https://cdn.marvel.com/u/prod/marvel/i/mg/c/e0/646b6a7d57faf/clean.jpg"
+       descripcion="Descripción del comic"
+       favorite="Va el check"
+        />
+    </div>
   )
 }
 

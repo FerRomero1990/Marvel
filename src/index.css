@@ -1,0 +1,23 @@
+/* Reset de los parametros que viene por defecto */
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+/* Variables */
+
+:root {
+  --orange-light: #DC9545;
+  --jadeA: #54B9C5;
+  --redA: #DB0E3F;
+  --lilaA: #BA93E9;
+  --gray-light: #EAE9E9;
+  --font-light: #798897;
+  --font-dark: #5F6974 ;
+  --white1: #FFFFFF;
+  --black0: #000000;
+  --main-font: 'Montserrat', sans-serif;
+}
