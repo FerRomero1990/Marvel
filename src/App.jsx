@@ -1,22 +1,39 @@
 import './App.css'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
 
+import { Comic } from './components/Comic/Comic'
 
 function App() {
+
+  const [comics, setComics]=useState([])
+
+  useEffect(() =>{
+    axios.get('https://gateway.marvel.com:443/v1/public/comics?ts=1&apikey=31c4e681831ac058689695f8eafa61e4&hash=398fd4b79f161f31334fab4fa30d45d0')
+    .then(res=>{
+      setComics(res.data.data.results)
+    })
+    .catch(error=>console.log(error))
+  },[])
+
+  console.log(comics)
   
-// useEffect(() => {
-//   fetch("https://dummyjson.com/products?limit=100")
-//     .then((res) => res.json())
-//     .then((data) => {
-//       setProducts(data.products);
-//       setFilteredProducts(data.products);
-//     });
-// }, []);
   return (
-    <>
-      
-      <h1>Vite + React</h1>
-      
-    </>
+    <div>
+      <h1>Vamos a Lograrlo</h1>
+
+      { comics.map(com=> (
+        <Comic
+        key={com.id}
+        comic={com}
+        nombreComic={com.title}
+        imagen={`${com.thumbnail.path}.${com.thumbnail.extension}`}
+        descripcion={com.description}
+        favorite={'Añadir a Favoritos'}/>
+      ) )
+        
+      }
+    </div>
   )
 }
 
