@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 
 import { Comic } from './components/Comic/Comic'
+import { Layout } from './components/Layout/Layout'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
   return (
     <div>
       <h1>Vamos a Lograrlo</h1>
+      <Layout/>
 
       { comics.map(com=> (
         <Comic

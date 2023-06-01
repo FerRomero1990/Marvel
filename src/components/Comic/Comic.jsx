@@ -4,14 +4,18 @@ import './Comic.css';
 function Comic({ nombreComic, imagen, descripcion, favorite }) {
 
   return(
-    <section className='comic-container'>
-      <h1 className='comic-name'>{nombreComic}</h1>
-        <div className='comic-info'>
-          <img src={imagen} alt='comic-front-page' className='comic-img'/>
-          <p className='comic-description'>{descripcion}</p>
-          </div>
-            <h4 className='add-favorite'>{favorite}</h4>
-    </section>
+    <div className='comic-card'>
+      <section className='comic-container'>
+        <h1 className='comic-name'>{nombreComic}</h1>
+          <div className='comic-info'>
+            <div className='img-container'>
+              <img src={imagen} alt='comic-front-page' className='comic-img'/>
+            </div>
+            <p className='comic-description'>{descripcion}</p>
+            </div>
+              <button className='add-favorite'>{favorite}</button>
+      </section>
+    </div>
   )
 }
 
