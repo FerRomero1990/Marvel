@@ -1,4 +1,7 @@
 body {
-  background: var(--black0);
-  /* background-image: url("/marvel/src/assets/img/img-background.jpeg") */
+  /* background: var(--black0); */
+  background-image: url('../src/assets/img-background.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat:round;
 }

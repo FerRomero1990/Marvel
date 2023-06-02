@@ -1,7 +1,11 @@
 import './Comic.css';
 
 // eslint-disable-next-line react/prop-types
-function Comic({ nombreComic, imagen, descripcion, favorite }) {
+function Comic({ nombreComic, imagen, descripcion, favorite, favoriteComic }) {
+
+  const listComic = () => {
+    favoriteComic()
+  };
 
   return(
     <div className='comic-card'>
@@ -13,7 +17,7 @@ function Comic({ nombreComic, imagen, descripcion, favorite }) {
             </div>
             <p className='comic-description'>{descripcion}</p>
             </div>
-              <button className='add-favorite'>{favorite}</button>
+              <button className='add-favorite' onClick={listComic}>{favorite}</button>
       </section>
     </div>
   )
