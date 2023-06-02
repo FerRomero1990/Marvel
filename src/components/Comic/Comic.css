@@ -55,3 +55,8 @@
   border-radius: 10px;
 }
 
+.add-favorite:active{
+  background: #ffffff;
+  color: #000000;
+}
+
